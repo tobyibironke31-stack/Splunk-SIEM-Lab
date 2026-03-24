@@ -35,6 +35,16 @@ Statistical Aggregation: Executed commands like stats count and distinct_count(p
 
 Relational Correlation: Developed queries to identify successful purchases (status=200) and map them to unique user IP addresses.
 
+Lab screen shots :
+
+![Splunk Dashboard](images/01-Splunk-Login.png)
+
+![Data Upload Success](images/02-Data-Upload-Success.png)
+
+![Event Search](images/03-Event-Search.png)
+
+![SPL Analytics Results](images/04-SPL-Analytics.png)
+
 Key Takeaways
 Virtualization: Gained hands-on experience managing enterprise software within a hypervisor-controlled Windows environment.
 
