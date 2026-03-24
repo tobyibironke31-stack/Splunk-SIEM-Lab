@@ -1,24 +1,43 @@
 # Splunk-SIEM-Lab
 Deployment of Splunk Enterprise on Windows 11 Pro VM for data analytics and SIEM operations.
-1. Infrastructure & Environment
-Hypervisor Layer: Utilized VMware Workstation to manage multiple concurrent virtual instances, including Windows 11 Pro and Windows Server 2022.
 
-Guest OS Configuration: Provisioned a Windows 11 Pro environment (Oibironke-Win11) specifically for Splunk Enterprise deployment.
+Splunk Enterprise SIEM & Virtualization Lab
+Project Overview
+This lab demonstrates the end-to-end deployment of a Splunk Enterprise instance within a virtualized infrastructure. The project focuses on setting up a Security Information and Event Management (SIEM) environment to ingest, index, and analyze large-scale log data using Search Processing Language (SPL).
 
-Network Connectivity: Configured and verified local service hosting via Port 8000, ensuring successful communication between the Splunk indexer and the web management interface.
+Technical Stack
+SIEM: Splunk Enterprise (Latest Version)
+
+Virtualization: VMware Workstation
+
+Operating Systems: Windows 11 Pro (Primary Host), Windows Server 2022
+
+Tools: Microsoft Edge (Management Console), VS Code (Scripting/Documentation)
+Technical Implementation Details
+1. Infrastructure Provisioning
+Virtual Environment: Configured a Windows 11 Pro VM specifically to host the Splunk indexer, ensuring proper resource allocation within the VMware hypervisor.
+
+Service Configuration: Successfully installed Splunk Enterprise and verified local web server connectivity via Port 8000, reaching the Administrator home dashboard.
 
 2. Data Engineering & Ingestion
-Dataset Management: Ingested the tutorialdata.zip dataset, successfully processing and indexing over 219,728 raw events.
+Dataset: Ingested tutorialdata.zip, consisting of web access logs and vendor sales data.
 
-Pipeline Verification: Monitored the ingestion wizard to ensure "File has been uploaded successfully" and validated data integrity across multiple source types, including vendor_sales and access_combined.
+Pipeline: Navigated the Splunk "Add Data" wizard to define source types and ensure the successful indexing of 219,728 raw events.
 
-Host Identification: Standardized event tagging to a local loopback (127.0.0.1) to simulate a centralized logging environment.
+Verification: Validated that data was searchable and correctly parsed into fields such as clientip, action, and status.
 
-3. Search Processing Language (SPL) Analytics
-Statistical Aggregation: Developed advanced SPL queries to transform raw logs into actionable metrics using the stats command.
+3. Advanced Analytics with SPL
+Used Search Processing Language (SPL) to perform complex data correlations and statistical analysis:
 
-User Behavior Analysis: Correlated successful purchases (status=200, action=purchase) with unique clientip addresses to identify high-volume users.
+Event Filtering: Utilized custom time ranges and boolean logic to isolate specific forensic windows.
 
-Cardinality & Values: Leveraged distinct_count(productId) and values(productId) functions to analyze the diversity of products purchased per unique session.
+Statistical Aggregation: Executed commands like stats count and distinct_count(productId) to transform raw logs into business intelligence.
 
-Time-Series Forensics: Applied Custom Time Ranges to isolate and investigate specific security or operational windows within the indexed metadata.
+Relational Correlation: Developed queries to identify successful purchases (status=200) and map them to unique user IP addresses.
+
+Key Takeaways
+Virtualization: Gained hands-on experience managing enterprise software within a hypervisor-controlled Windows environment.
+
+SIEM Proficiency: Mastered the basics of the Splunk pipeline: Ingest, Index, and Search.
+
+Analytical Thinking: Developed the ability to write complex search queries to extract meaningful insights from over 200,000 log entries.
