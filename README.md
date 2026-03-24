@@ -37,13 +37,13 @@ Relational Correlation: Developed queries to identify successful purchases (stat
 
 Lab screen shots :
 
-![Splunk Dashboard](images/01-Splunk-Login.png)
+![Splunk Dashboard](Images/01-Splunk-Login.png.png)
 
-![Data Upload Success](images/02-Data-Upload-Success.png)
+![Data Upload Success](Images/02-Data-Upload-Success.png.png)
 
-![Event Search](images/03-Event-Search.png)
+![Event Search](Images/03-Event-Search.png.png)
 
-![SPL Analytics Results](images/04-SPL-Analytics.png)
+![SPL Analytics Results](Images/04-SPL-Analytics.png.png)
 
 Key Takeaways
 Virtualization: Gained hands-on experience managing enterprise software within a hypervisor-controlled Windows environment.
